@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('foto_perfil', 255)->nullable();
             $table->string('estado', 255)->nullable();
+            $table->string('nombre_usuario', 12)->unique();
             $table->timestamps();
 
             $table->foreign('id_persona')->references('id_persona')->on('personas');
